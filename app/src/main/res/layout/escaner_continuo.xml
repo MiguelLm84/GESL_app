@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/barcode_scanner2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+    </com.journeyapps.barcodescanner.DecoratedBarcodeView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:id="@+id/buttonsLayout"
+        android:background="@color/transparent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textSize="20sp"
+            android:text="FINALIZAR"
+            android:onClick="finish"
+            android:textColor="@color/white"
+            android:background="@drawable/border_redondos"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

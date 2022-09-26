@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/empty"
+            android:checkable="false"
+            android:enabled="false"
+            app:showAsAction="never"
+            tools:ignore="MenuTitle" />
+        <item
+            android:id="@+id/principal"
+            android:icon="@drawable/ic_home_black"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/editNumEtqsCaja"
+            android:icon="@drawable/edit_box"
+            android:title="@string/numero_etiquetas" />
+        <item
+            android:id="@+id/longitudCodigo"
+            android:icon="@drawable/codigo_barras"
+            android:title="@string/longitud_codigo" />
+        <item
+            android:id="@+id/app_bar_switch"
+            android:icon="@drawable/cancel"
+            android:title="@string/repeticion_etiquetas"
+            app:actionLayout="@layout/switch_item"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat" />
+        <item
+            android:id="@+id/vaciar_carpeta"
+            android:icon="@drawable/eliminar_carpeta"
+            android:title="@string/vaciar_carpeta" />
+
+    </group>
+</menu>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutversionmenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_footer"
+        android:clipOrientation="horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtversion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/titulo"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtinfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtinfo"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="-4sp"
+        android:text="@string/pulsa_el_botton_escanear_o_escriba_el_codigo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/codelayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <TextView
+        android:id="@+id/tvNFC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="13dp"
+        android:gravity="center"
+        android:lineSpacingExtra="-4sp"
+        android:text="@string/tiene_el_modo_nfc_activo_aproxime_el_terminal_a_la_etiqueta"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnEscanear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codelayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/codelayout"
+        android:layout_width="301dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tvNFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtinfo">
+
+        <Button
+            android:id="@+id/butbarras"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_barras"
+            android:backgroundTint="#535353"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_barras"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+            tools:srcCompat="@drawable/ic_barras" />
+
+        <EditText
+            android:id="@+id/etCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/transparent"
+            android:hint="@string/escriba_el_codigo"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="12dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/btnEnter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:contentDescription="@string/enter"
+            android:focusable="true"
+            android:src="@drawable/ic_flecha"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnEscanear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="232dp"
+        android:background="@drawable/boton_circulo"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:elevation="10dp"
+        android:focusable="true"
+        android:padding="20dp"
+        android:src="@drawable/ic_scanner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNFC"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="@string/escanear"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEscanear"
+        app:layout_constraintEnd_toEndOf="@+id/btnEscanear"
+        app:layout_constraintStart_toStartOf="@+id/btnEscanear"
+        app:layout_constraintTop_toTopOf="@+id/btnEscanear" />
+
+    <Switch
+        android:id="@+id/switchNFC"
+        android:layout_width="186dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="57dp"
+        android:background="#00213018"
+        android:text="@string/activar_nfc"
+        android:thumbTint="@color/switch_thumb_selector"
+        android:trackTint="@color/switch_track_selector"
+        app:layout_constraintBottom_toTopOf="@+id/layoutversionmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEscanear"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/viewdata"
+        android:layout_width="169dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="121dp"
+        android:text="@string/textview"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/switchNFC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEscanear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

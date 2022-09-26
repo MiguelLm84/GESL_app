@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/placeholder"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/placeholder2"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/placeholder3"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/placeholder5"
+        android:title=""
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/Search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction"/>
+
+    <item
+        android:id="@+id/List"
+        android:icon="@drawable/ic_list"
+        android:title="@string/list"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+</menu>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.EscanearTiendaActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationViewElegirCentro2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComenzar"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/list" />
+
+    <TextView
+        android:id="@+id/tvSCentro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/saira_condensed_medium"
+        android:text="@string/centro"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/layouts1"
+        app:layout_constraintStart_toStartOf="@+id/layouts1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layouts1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/border_rounder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSCentro">
+
+        <Spinner
+            android:id="@+id/spinerCentro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="7dp"
+            android:textAlignment="textStart"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/modelo"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/layouts2"
+        app:layout_constraintStart_toStartOf="@+id/layouts2"
+        app:layout_constraintTop_toBottomOf="@id/layouts1" />
+
+    <LinearLayout
+        android:id="@+id/layouts2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/border_rounder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSModelo">
+
+        <Spinner
+            android:id="@+id/spinerModeloEtq"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="7dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnComenzar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/border_redondos"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/comenzar"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layouts2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

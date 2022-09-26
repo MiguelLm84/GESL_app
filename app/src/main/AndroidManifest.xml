@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.geslapp">
+
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature android:name="android.hardware.nfc" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Asysgon"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.AjustesCajaActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ListBarcodesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".core.camara.ScannerContinuoMediumScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.EtqContenidoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ElegirCentroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.EscanearTiendaActivity" />
+
+        <activity
+            android:name=".ui.ScannerTiendaActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Asysgon.ScannerTiendaActivity" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                <action android:name="android.nfc.NdefMessage" />
+
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="application/your.uniqueapp.nfc" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.MenuActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.ProcesoPorLotesActivity" />
+        <activity android:name=".ui.CentroActivoActivity" />
+        <activity android:name=".ui.RegistroActivity" />
+        <activity android:name=".ui.CajasActivity" />
+        <activity android:name=".ui.EstadoEtq" />
+        <activity android:name=".ui.RecogidasActivity" />
+
+        <activity
+            android:name=".core.camara.CamaraX"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".ui.ActivityCarga"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.Rv_etiquetas"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.Rv_items"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.EtiquetasActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <activity
+            android:name=".ui.EtiquetasCentros"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
+        <activity
+            android:name=".ui.Activity_Info_General"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.Activity_Dashboard" />
+        <activity
+            android:name=".core.camara.CaptureAct"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".ui.ContinuousCaptureActivity" />
+        <activity android:name=".core.camara.EscanerContinuoAct" />
+        <activity
+            android:name=".ui.Splash"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.GESLapp.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

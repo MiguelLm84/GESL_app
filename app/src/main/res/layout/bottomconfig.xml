@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layouttext"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtconfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textdialog_bg"
+            android:gravity="center"
+            android:text="@string/txtconfig"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layouttext2"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txtVconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/txtconfig"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="TextContrastCheck">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutip"
+        android:orientation="horizontal"
+        android:paddingTop="28dp"
+        >
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/txtip"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/edtip"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:breakStrategy="simple"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHighlight="@null"
+            android:textColorHint="@color/black"
+            android:textColorLink="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutproject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="28dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/proyecto"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/edtproject"
+            style="@null"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHighlight="@null"
+            android:textColorHint="@color/black"
+            android:textColorLink="@null"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutrecursos"
+        android:orientation="horizontal"
+        android:paddingTop="28dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txtrecursos"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp" />
+
+        <EditText
+            android:id="@+id/edtrecurso"
+            style="@null"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:singleLine="false"
+            android:textColor="@color/black"
+            android:textColorHighlight="@null"
+            android:textColorHint="@color/black"
+            android:textColorLink="@null"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp"
+        android:id="@+id/layoutfoto"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="78dp"
+            android:layout_height="58dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/logo_gesl"
+            app:tint="@color/black" />
+
+        <Button
+            android:id="@+id/butCsave"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="130dp"
+            android:background="@drawable/ic_save_as"
+            android:backgroundTint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+</LinearLayout>

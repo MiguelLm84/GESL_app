@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logogesl"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_bar"
+            app:srcCompat="@drawable/logo_gesl"
+            app:tint="@color/black" />
+
+        <Button
+            android:id="@+id/btnProcesoPorLotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/border_redondos"
+            android:lineSpacingExtra="6dp"
+            android:padding="18dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/butcentral"
+
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logogesl" />
+
+        <Button
+            android:id="@+id/btnCentroActivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/border_redondos"
+            android:backgroundTint="#737373"
+            android:clickable="false"
+            android:contextClickable="false"
+            android:enabled="false"
+            android:focusable="true"
+            android:lineSpacingExtra="6dp"
+            android:padding="18dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/butcentro"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnProcesoPorLotes" />
+
+        <LinearLayout
+            android:id="@+id/layoutversionmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_footer"
+            android:clipOrientation="horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/txtversion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/txtgeslv"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtdeveloped"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_bar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#252525"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtMuser"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/butCmenu"
+                app:layout_constraintStart_toEndOf="@+id/imgcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/butCmenu"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/more"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/imgcon"
+                android:layout_width="35dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:backgroundTint="#A8A7A7"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.47"
+                app:srcCompat="@drawable/ic_info" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtlastcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutversionmenu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
